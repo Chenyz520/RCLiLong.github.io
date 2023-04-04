@@ -71,6 +71,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ipv6-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/04/ipv6-test/" class="article-date">
+  <time class="dt-published" datetime="2023-04-04T08:42:19.000Z" itemprop="datePublished">2023-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/04/04/ipv6-test/">ipv6_test</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>现在大部分的光纤宽带配备的光猫路由器二合一设备都默认开启ipv6了，这样我的香橙派连接wifi就可以获得ipv6地址了。可以使用ifconfig（ubuntu）来查看inet6。</p>
+<pre><code>inet6 fe80::5e9c:2494:bd70:e545 prefixlen 64 scopeid 0x20 //本地ipv6地址
+inet6 2409:8a5c:7223:29c0:faa5:b1a0:bbd8:53a7 prefixlen 64 scopeid 0x0//分配的ipv6地址 一般几天重新分配
+inet6 2409:8a5c:7223:29c0:b861:83ca:54c:7f9c prefixlen 64 scopeid 0x0//临时ipv6地址，外网可见，会快速变换
+inet6 2409:8a5c:7226:81b0:fd08:a71e:4c88:a097 prefixlen 64 scopeid 0x0//临时ipv6地址
+inet6 2409:8a5c:7223:29c0:7587:92e1:375b:1392 prefixlen 64 scopeid 0x0//过期的临时ipv6地址
+</code></pre>
+<p>有了ipv6地址之后可以使用[ipv6]可以直接访问。</p>
+<p>由于我国的审核制度的存在，80（http），443（https）端口都是被封了的。不过其他端口都是可以使用的。</p>
+<p>动态绑定域名DDNS，这样就可以不需要每次都去管更新的号码了。</p>
+<p>参考博客：动态IP解析免费域名托管到Cloudflare和GcoreDNS免费解析G-core动态DNS接口API (wanuse.com)</p>
+<p>还有github的DDNS：NewFuture&#x2F;DDNS: 自动更新域名解析到本机IP(支持dnspod,阿里DNS,CloudFlare,华为云,DNSCOM…) (github.com)</p>
+<p>不过由于我cloudflare的api获取不了，因此采用了第一个参考博客的Gcore的api。</p>
+<p>具体的可以点开链接观看，没问过作者就不方便转载了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/04/ipv6-test/" data-id="clg20jgq90001yy15cb936hmt" data-title="ipv6_test" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-nihao" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/03/26/nihao/" class="article-date">
@@ -183,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/26/nihao/" data-id="clfp5zt7h00010l158pkmhwi6" data-title="nihao" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/26/nihao/" data-id="clg20jgqn0002yy15asmr56dh" data-title="nihao" class="article-share-link">分享</a>
       
       
       
@@ -234,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/16/hello-world/" data-id="clfp5zt6q00000l15bgl3g4oc" data-title="Hello World" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/16/hello-world/" data-id="clg20jgpb0000yy15cyhfdwwd" data-title="Hello World" class="article-share-link">分享</a>
       
       
       
@@ -264,7 +316,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
     </div>
   </div>
 
@@ -275,6 +327,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/04/04/ipv6-test/">ipv6_test</a>
+          </li>
         
           <li>
             <a href="/2023/03/26/nihao/">nihao</a>
